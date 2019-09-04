@@ -3,6 +3,7 @@ package com.vojtamares.minecraft.plugin.onePlayerSleepingIsEnough.Listeners;
 import com.vojtamares.minecraft.plugin.onePlayerSleepingIsEnough.OnePlayerSleepingIsEnough;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameRule;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
@@ -24,6 +25,13 @@ public class PlayerSleepListener implements Listener
     {
         if (this.isDay(event.getPlayer().getWorld().getTime()) && !event.getPlayer().getWorld().isThundering())
             return;
+
+        if (!event.getPlayer().getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE))
+        {
+            event.getPlayer().sendMessage(ChatColor.DARK_RED + "You can't sleep during infinite night");
+            event.setCancelled(true);
+            return;
+        }
 
         Bukkit.broadcastMessage(event.getPlayer().getDisplayName() + ChatColor.BLUE + " is sleeping");
 
