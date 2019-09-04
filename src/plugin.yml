@@ -1,0 +1,12 @@
+# Author
+author: Aca_ aka Vojtěch Mareš
+website: https://vojtamares.com
+
+# Plugin head
+name: OnePlayerSleeingIsEnough
+main: com.vojtamares.minecraft.plugin.onePlayerSleepingIsEnough.OnePlayerSleepingIsEnough
+description: When multiple players are connected to server, only one sleeping is needed to set time to day, also clears weather!
+
+# Plugin customs
+version: 1.0.0
+api-version: 1.14
