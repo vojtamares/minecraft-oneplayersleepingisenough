@@ -1,0 +1,6 @@
+# IDE
+/.idea
+/OnePlayerSleepingIsEnough.iml
+
+# Build
+/out
