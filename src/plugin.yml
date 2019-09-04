@@ -8,5 +8,5 @@ main: com.vojtamares.minecraft.plugin.onePlayerSleepingIsEnough.OnePlayerSleepin
 description: When multiple players are connected to server, only one sleeping is needed to set time to day, also clears weather!
 
 # Plugin customs
-version: 1.0.0
+version: 1.0.1
 api-version: 1.14
