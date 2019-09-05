@@ -52,7 +52,7 @@ public class PlayerSleepListener implements Listener
 
     private boolean isDay(long time)
     {
-        if (time > 23435 && time < 12535 && time > 0)
+        if (time > 23435 || time < 12535)
             return true;
         else
             return false;
